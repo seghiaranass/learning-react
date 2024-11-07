@@ -5,8 +5,8 @@ import Header from "./components/Header/Header";
 import CoreConecpt from "./components/CoreConcept";
 import TabButton from "./components/TabButton";
 function App() {
-  function handleSelect() {
-    console.log(this);
+  function handleSelect(selectedButton) {
+    console.log(selectedButton);
   }
 
 
@@ -30,11 +30,16 @@ function App() {
         <section id="examples">
           <h2>Examples</h2>
           <menu>
-            <TabButton onSelect={handleSelect}>Components</TabButton>
-            <TabButton onSelect={handleSelect}>JSX</TabButton>
-            <TabButton onSelect={handleSelect}>Props</TabButton>
-            <TabButton onSelect={handleSelect}>State</TabButton>
+            <TabButton onSelect={()=>{handleSelect("Components")}}>Components</TabButton>
+            <TabButton onSelect={()=>{handleSelect("JSX")}}>JSX</TabButton>
+            <TabButton onSelect={()=>{handleSelect("Props")}}>Props</TabButton>
+            <TabButton onSelect={()=>{handleSelect("State")}}>State</TabButton>
           </menu>
+
+
+
+
+
         </section>
       </main>
     </div>
