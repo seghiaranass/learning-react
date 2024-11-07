@@ -3,7 +3,7 @@ import componentsImg from "./assets/components.png";
 import { CORE_CONCEPTS } from "./data";
 import Header from "./components/Header/Header";
 import CoreConecpt from "./components/CoreConcept";
-
+import TabButton from "./components/TabButton";
 function App() {
   return (
     <div>
@@ -21,8 +21,15 @@ function App() {
 
           </ul>
         </section>
-
-        <h2>Time to get started!</h2>
+        <section id="examples">
+          <h2>Examples</h2>
+          <menu>
+            <TabButton>Components</TabButton>
+            <TabButton>JSX</TabButton>
+            <TabButton>Props</TabButton>
+            <TabButton>State</TabButton>
+          </menu>
+        </section>
       </main>
     </div>
   );
