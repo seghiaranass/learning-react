@@ -1,15 +1,19 @@
+import {useState} from 'react';
 
-import componentsImg from "./assets/components.png";
 import { CORE_CONCEPTS } from "./data";
 import Header from "./components/Header/Header";
 import CoreConecpt from "./components/CoreConcept";
 import TabButton from "./components/TabButton";
+
+
+
 function App() {
+  const [selectedTopic,setSelectedTopic] = useState('Please click a button');
+
   function handleSelect(selectedButton) {
-    console.log(selectedButton);
+    setSelectedTopic(selectedButton)
+
   }
-
-
 
   return (
     <div>
@@ -36,6 +40,7 @@ function App() {
             <TabButton onSelect={()=>{handleSelect("State")}}>State</TabButton>
           </menu>
 
+          {selectedTopic}
 
 
 
